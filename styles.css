@@ -134,7 +134,7 @@ body {
     width: 400px;
     position: relative;
     z-index: 2; /* Pastikan kotak permainan di atas garis */
-    margin-top: 20px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
+    margin-top: 10px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
     border: 3px solid transparent; /* Border transparan */
     border-image: white;/*linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Gradien pelangi */
     border-image-slice: 1; /* Memotong gradien untuk border */
