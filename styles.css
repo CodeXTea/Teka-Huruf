@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Menyelaraskan konten di atas halaman */
-    min-height: 100vh; /* Mengatur tinggi minimum untuk viewport penuh */
+    min-height: 10vh; /* Mengatur tinggi minimum untuk viewport penuh */
     background-color: black; /* Background warna hitam */
 }
 
