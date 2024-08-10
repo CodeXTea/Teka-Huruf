@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: flex-start; /* Menyelaraskan konten di atas halaman */
     min-height: 100vh; /* Mengatur tinggi minimum untuk viewport penuh */
-    padding-top: 20%; /* Menambahkan padding untuk memberi ruang di bawah bar */
+    padding-top: 10%; /* Menambahkan padding untuk memberi ruang di bawah bar */
     box-sizing: border-box; /* Menjaga padding dan border dalam ukuran elemen */
     background-color: black; /* Background warna hitam */
 }
