@@ -12,6 +12,67 @@ body {
     background-color: black; /* Background warna hitam */
 }
 
+/* Media Query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
+@media (max-width: 768px) {
+    #top-bar {
+        font-size: 1em; /* Mengurangi ukuran font untuk perangkat kecil */
+        padding: 5px;
+    }
+
+    .container {
+        width: 90%; /* Mengatur lebar container lebih kecil */
+        padding: 15px; /* Mengurangi padding */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Mengurangi ukuran font untuk judul */
+    }
+
+    input[type="text"] {
+        width: 50px; /* Mengatur lebar input huruf untuk perangkat kecil */
+    }
+
+    button {
+        font-size: 0.9em; /* Mengurangi ukuran font pada tombol */
+        padding: 8px 16px; /* Mengurangi padding pada tombol */
+    }
+}
+
+/* Media Query untuk layar dengan lebar maksimum 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    #top-bar {
+        flex-direction: column; /* Mengatur top-bar menjadi kolom */
+        align-items: flex-start;
+    }
+
+    #dev-menu-button {
+        width: 100%; /* Mengatur tombol menu developer memenuhi lebar */
+    }
+
+    .container {
+        width: 100%; /* Mengatur lebar container menjadi 100% */
+        margin-top: 10px; /* Mengurangi margin atas */
+    }
+
+    h1 {
+        font-size: 2em; /* Mengurangi ukuran font untuk judul */
+    }
+
+    input[type="text"] {
+        width: 40px; /* Mengatur lebar input huruf lebih kecil */
+    }
+
+    button {
+        font-size: 0.8em; /* Mengurangi ukuran font pada tombol */
+        padding: 6px 12px; /* Mengurangi padding pada tombol */
+    }
+
+    .dialog-content {
+        width: 90%; /* Mengatur lebar dialog untuk perangkat kecil */
+    }
+}
+
+
 #particles-js {
     position: absolute;
     width: 100%;
