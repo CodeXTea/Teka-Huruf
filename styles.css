@@ -1,0 +1,246 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+}
+
+/* Styling untuk #top-bar */
+#top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Titik tiga di sebelah kiri */
+#top-bar #dots-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #007BFF;
+    border-radius: 50%;
+}
+
+/* Nama pengguna di sebelah kanan */
+#top-bar #score {
+    color: #28a745; /* Warna hijau untuk skor */
+}
+
+#top-bar #username-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#username-display p {
+    margin: 0;
+    color: #007BFF; /* Warna biru untuk nama pengguna */
+}
+
+/* Styling untuk kotak pendaftaran */
+#registration-container, #game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+}
+
+/* Styling untuk form pendaftaran */
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registration-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#registration-form button {
+    width: 100px;
+}
+
+#registration-feedback {
+    font-size: 1em;
+    color: #d9534f; /* Warna merah untuk feedback */
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.word-container {
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    margin: 20px 0;
+    border: 2px dashed #007BFF;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"] {
+    font-size: 1.2em;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.feedback {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #d9534f; /* Warna merah untuk feedback */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* styles.css */
+/* ... existing styles ... */
+
+/* Styling untuk menu developer dialog */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.dialog-content h2 {
+    margin-top: 0;
+}
+
+.dialog-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dialog-content button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dialog-content button:hover {
+    background-color: #0056b3;
+}
+
+.username-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+/* styles.css */
+/* ... existing styles ... */
+
+/* Styling untuk bar di bagian atas */
+#dev-menu-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#dev-menu-button:hover {
+    background-color: #0056b3;
+}
+
+.username-display {
+    font-size: 1em;
+}

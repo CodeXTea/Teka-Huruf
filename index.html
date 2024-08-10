@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teka-Teki Kata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="registration-container" class="container">
+        <h1>Daftar Akun</h1>
+        <form id="registration-form">
+            <label for="username">Nama Pengguna:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Daftar</button>
+            <div id="registration-feedback" class="feedback"></div>
+        </form>
+    </div>
+    
+    <div id="game-container" class="container" style="display: none;">
+        <h1>Teka-Teki Kata</h1>
+        <p>Isi huruf yang hilang untuk menyelesaikan kata berikut:</p>
+        <div id="word-container" class="word-container"></div>
+        <input type="text" id="user-input" maxlength="1" placeholder="Huruf" />
+        <button onclick="checkLetter()">Periksa</button>
+        <button onclick="showHint()">Tampilkan Petunjuk</button>
+        <p id="feedback" class="feedback"></p>
+        <button onclick="submitAnswer()">Kirim Jawaban</button>
+        <button onclick="resetGame()">Mulai Lagi</button>
+    </div>
+    
+    <!-- Bar di bagian atas -->
+    <div id="top-bar">
+        <button id="dev-menu-button">Developer Menu</button>
+       
+        <div id="username-display">
+            <p>Nama Pengguna: <span id="username-value"></span></p>
+            <p id="score">Skor: 0</p>
+        </div>
+    </div>
+
+    <!-- Password dialog for developer menu -->
+    <div id="dev-menu-dialog" class="dialog" style="display: none;">
+        <div class="dialog-content">
+            <h2>Developer Menu</h2>
+            <label for="dev-password">Password:</label>
+            <input type="password" id="dev-password" />
+            <button id="dev-password-submit">Submit</button>
+            <button id="dev-password-cancel">Cancel</button>
+            <div id="dev-feedback" class="feedback"></div>
+            <div id="dev-username-list" class="username-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
