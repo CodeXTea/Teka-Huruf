@@ -1,44 +1,86 @@
-/* styles.css */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    color: #fff;
+    overflow: hidden; /* Sembunyikan scrollbars */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
+    align-items: flex-start; /* Menyelaraskan konten di atas halaman */
+    min-height: 100vh; /* Mengatur tinggi minimum untuk viewport penuh */
+    padding-top: 20%; /* Menambahkan padding untuk memberi ruang di bawah bar */
+    box-sizing: border-box; /* Menjaga padding dan border dalam ukuran elemen */
+    background-color: black; /* Background warna hitam */
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 400px;
-    position: relative;
-    z-index: 2; /* Pastikan kotak permainan di atas garis */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Di belakang konten lainnya */
 }
 
-/* Styling untuk #top-bar */
 #top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 10px;
-    left: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
     font-size: 1.2em;
     font-weight: bold;
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: transparent; /* Background transparan */
+    padding: 10px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    z-index: 1; /* Pastikan bar berada di atas konten lainnya */
+    border: 3px solid transparent; /* Border transparan */
+    border-image: linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Gradien pelangi */
+    border-image-slice: 1; /* Memotong gradien untuk border */
+    background-size: 600% 600%;
+    animation: rainbowAnimation 10s ease infinite; /* Animasi warna pelangi */
 }
 
-/* Titik tiga di sebelah kiri */
+@keyframes rainbowAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    background: linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Rainbow gradient */
+    padding: 20px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+    margin-top: 20px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
+    background-size: 600% 600%;
+    animation: rainbowAnimation 10s ease infinite; /* Animasi warna pelangi */
+}
+
+/* Styling untuk kotak pendaftaran dan permainan */
+#registration-container, #game-container {
+    background: transparent; /* Background transparan */
+    padding: 20px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+    margin-top: 20px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
+    border: 3px solid transparent; /* Border transparan */
+    border-image: white;/*linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Gradien pelangi */
+    border-image-slice: 1; /* Memotong gradien untuk border */
+    background-size: 600% 600%;
+    animation: rainbowAnimation 1s ease infinite; /* Animasi warna pelangi */
+}
+
 #top-bar #dots-container {
     display: flex;
     flex-direction: column;
@@ -70,18 +112,6 @@ body {
     color: #007BFF; /* Warna biru untuk nama pengguna */
 }
 
-/* Styling untuk kotak pendaftaran */
-#registration-container, #game-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 400px;
-    position: relative;
-    z-index: 2; /* Pastikan kotak permainan di atas garis */
-}
-
 /* Styling untuk form pendaftaran */
 #registration-form {
     display: flex;
@@ -106,10 +136,20 @@ body {
     color: #d9534f; /* Warna merah untuk feedback */
 }
 
+@keyframes neonFlicker {
+    0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 50px #ff0080; }
+    50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 60px #ff0080, 0 0 80px #ff0080, 0 0 100px #ff0080; }
+    100% { text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 50px #ff0080; }
+}
+
 h1 {
-    color: #333;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 4em; /* Ukuran font besar untuk visibilitas */
+    font-weight: bold; /* Menebalkan teks */
+    color: #ff0080; /* Warna neon */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff0080, 0 0 20px #ff0080; /* Bayangan neon untuk efek kedalaman */
+    animation: neonFlicker 1.5s infinite alternate; /* Animasi berkedip neon */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-bottom: 20px; /* Jarak bawah */
 }
 
 .word-container {
@@ -118,8 +158,8 @@ h1 {
     margin: 20px 0;
     border: 2px dashed #007BFF;
     padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 15px; /* Sudut melengkung */
+    background-color: transparent;
 }
 
 input[type="text"] {
@@ -162,9 +202,6 @@ button:hover {
     animation: fadeIn 1s ease-in;
 }
 
-/* styles.css */
-/* ... existing styles ... */
-
 /* Styling untuk menu developer dialog */
 .dialog {
     position: fixed;
@@ -172,7 +209,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background:transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,11 +217,11 @@ button:hover {
 }
 
 .dialog-content {
-    background: white;
+    background: #B0C4DE;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px; /* Sudut melengkung */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    width: 300px;
+    width: 50%;
     text-align: center;
 }
 
@@ -193,7 +230,7 @@ button:hover {
 }
 
 .dialog-content input[type="password"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -221,9 +258,6 @@ button:hover {
     overflow-y: auto;
     margin-top: 10px;
 }
-
-/* styles.css */
-/* ... existing styles ... */
 
 /* Styling untuk bar di bagian atas */
 #dev-menu-button {
