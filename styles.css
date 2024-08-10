@@ -7,9 +7,38 @@ body {
     justify-content: center;
     align-items: flex-start; /* Menyelaraskan konten di atas halaman */
     min-height: 100vh; /* Mengatur tinggi minimum untuk viewport penuh */
-    padding-top: 10%; /* Menambahkan padding untuk memberi ruang di bawah bar */
-    box-sizing: border-box; /* Menjaga padding dan border dalam ukuran elemen */
     background-color: black; /* Background warna hitam */
+}
+
+.container {
+    background: linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Rainbow gradient */
+    padding: 20px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+    margin-top: 1000px; /* Mengurangi jarak dari bar atas */
+    background-size: 600% 600%;
+    animation: rainbowAnimation 10s ease infinite; /* Animasi warna pelangi */
+}
+
+#registration-container, #game-container {
+    background: transparent; /* Background transparan */
+    padding: 20px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 2; /* Pastikan kotak permainan di atas garis */
+    margin-top: 10%; /* Mengurangi jarak dari bar atas */
+    border: 3px solid transparent; /* Border transparan */
+    border-image: white; /* Gradien pelangi */
+    border-image-slice: 1; /* Memotong gradien untuk border */
+    background-size: 600% 600%;
+    animation: rainbowAnimation 1s ease infinite; /* Animasi warna pelangi */
 }
 
 /* Media Query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
@@ -108,38 +137,6 @@ body {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
-}
-
-.container {
-    background: linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Rainbow gradient */
-    padding: 20px;
-    border-radius: 15px; /* Sudut melengkung */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    text-align: center;
-    width: 400px;
-    position: relative;
-    z-index: 2; /* Pastikan kotak permainan di atas garis */
-    margin-top: 20px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
-    background-size: 600% 600%;
-    animation: rainbowAnimation 10s ease infinite; /* Animasi warna pelangi */
-}
-
-/* Styling untuk kotak pendaftaran dan permainan */
-#registration-container, #game-container {
-    background: transparent; /* Background transparan */
-    padding: 20px;
-    border-radius: 15px; /* Sudut melengkung */
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 400px;
-    position: relative;
-    z-index: 2; /* Pastikan kotak permainan di atas garis */
-    margin-top: 10px; /* Menambahkan jarak untuk memastikan kotak tidak bertabrakan dengan bar */
-    border: 3px solid transparent; /* Border transparan */
-    border-image: white;/*linear-gradient(135deg, #ff007f, #ff9900, #00ffcc, #00aaff); /* Gradien pelangi */
-    border-image-slice: 1; /* Memotong gradien untuk border */
-    background-size: 600% 600%;
-    animation: rainbowAnimation 1s ease infinite; /* Animasi warna pelangi */
 }
 
 #top-bar #dots-container {
