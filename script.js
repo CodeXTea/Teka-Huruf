@@ -1,8 +1,16 @@
 const words = [
-    { word: "AYAM", category: "Haiwan,Kaki Dua" },
+    { word: "AYAM", category: "Haiwan Berkaki Dua" },
+    { word: "ANGSA", category: "Haiwan Berkaki Dua" },
+    { word: "ARNAB", category: "Haiwan,Berkaki Empat" },
+    { word: "BABI", category: "Haiwan,HARAM(IN ISLAM)" },
+    { word: "KAKI", category: "Angota Badan" },
+    { word: "LEMBU", category: "Haiwan Berkaki Empat" },
+    { word: "KERBAU", category: "Haiwan Berkaki Empat" },
+    { word: "KAMBING", category: "Haiwan Berkaki Empat" },
+    { word: "LAMPU", category: "Benda(Terang)" },
     { word: "JAM", category: "Benda" },
     { word: "KUNCI", category: "Benda" },
-    { word: "BADAK", category: "Haiwan" }
+    { word: "BADAK", category: "Haiwan Berkaki Empat" }
 ];
 
 let currentWordObj = {};
@@ -209,3 +217,4 @@ document.getElementById('dev-password-cancel').addEventListener('click', functio
 
 // Mulai permainan saat halaman dimuat
 window.onload = startGame;
+
