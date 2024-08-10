@@ -52,7 +52,7 @@ body {
 
     .container {
         width: 100%; /* Mengatur lebar container menjadi 100% */
-        margin-top: 10px; /* Mengurangi margin atas */
+        margin-top: 30px; /* Mengurangi margin atas */
     }
 
     h1 {
